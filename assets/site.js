@@ -90,7 +90,7 @@
       io.disconnect();
       const css = document.createElement('link'); css.rel = 'stylesheet'; css.href = root + 'vendor/maplibre/maplibre-gl.css'; document.head.appendChild(css);
       (window.maplibregl ? Promise.resolve() : load(root + 'vendor/maplibre/maplibre-gl.js'))
-        .then(() => load(root + 'map.js?v=11'))
+        .then(() => load(root + 'map.js?v=12'))
         .then(() => window.lcMap(box))
         .catch(() => {});
     }, { rootMargin: '400px' });

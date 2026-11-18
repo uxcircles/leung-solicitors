@@ -59,7 +59,7 @@ p { margin: 0 0 1em; }
 .concept-inner svg { width: 14px; height: 14px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
 .concept-long a { text-decoration: underline; }
 .concept-tag { background: var(--seal); color: #fff; font-weight: 700; font-size: 11px; letter-spacing: .08em; text-transform: uppercase; padding: 2px 7px; border-radius: 2px; }
-@media (max-width: 640px) { .concept-long, .concept-by { display: none; } }
+@media (max-width: 640px) { .concept-long { display: none; } }
 
 /* header */
 .site-head { position: sticky; top: 0; z-index: 40; background: var(--paper); border-bottom: 1px solid var(--line); }

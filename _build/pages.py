@@ -9,7 +9,7 @@ import json, os
 
 BUILD = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(BUILD)
-V = "11"  # cache-bust: bump on every CSS/JS change
+V = "12"  # cache-bust: bump on every CSS/JS change
 
 FIRM = {
     "tel": "0333 577 7168", "tel_href": "+443335777168",
