@@ -9,7 +9,7 @@ import json, os
 
 BUILD = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(BUILD)
-V = "10"  # cache-bust: bump on every CSS/JS change
+V = "11"  # cache-bust: bump on every CSS/JS change
 
 FIRM = {
     "tel": "0333 577 7168", "tel_href": "+443335777168",
@@ -46,12 +46,13 @@ def bird(cls="bird"):
     return f'<svg class="{cls}" viewBox="0 0 80 106" aria-hidden="true"><use href="{P()}assets/img/seal.svg?v={V}#b"/></svg>'
 
 
-NAV = [
+def nav_items():
+    return [
     ("services", T("Services", "服務範圍")),
     ("notary", T("Notary", "公證服務")),
     ("about", T("About", "關於我們")),
     ("contact", T("Contact", "聯絡")),
-]
+    ]
 
 
 def head(slug, title, desc):
@@ -94,7 +95,7 @@ def header(slug):
         switch_href = "../"
     links = "".join(
         f'<a href="{P()}{"zh/" if LANG == "zh" else ""}{s}.html"{" aria-current=\"page\"" if s == slug else ""}>{n}</a>'
-        for s, n in NAV)
+        for s, n in nav_items())
     home = f'{P()}{"zh/" if LANG == "zh" else ""}'
     return f"""<header class="site-head">
   <div class="wrap head-row">
@@ -135,7 +136,7 @@ def footer():
     </div>
     <div>
       <h2 class="foot-h">{T('Pages', '頁面')}</h2>
-      <p class="foot-links">{''.join(f'<a href="{P()}{zh}{s}.html">{n}</a>' for s, n in NAV)}<a href="{P()}{zh}privacy.html">{T('Privacy', '私隱政策')}</a><a href="{P()}{'' if LANG == 'zh' else 'zh/'}" lang="{T('zh-Hant', 'en')}">{T('中文', 'English')}</a></p>
+      <p class="foot-links">{''.join(f'<a href="{P()}{zh}{s}.html">{n}</a>' for s, n in nav_items())}<a href="{P()}{zh}privacy.html">{T('Privacy', '私隱政策')}</a><a href="{P()}{'' if LANG == 'zh' else 'zh/'}" lang="{T('zh-Hant', 'en')}">{T('中文', 'English')}</a></p>
     </div>
   </div>
   <div class="wrap foot-legal">

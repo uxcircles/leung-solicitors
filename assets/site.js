@@ -7,7 +7,9 @@
   const btn = document.querySelector('.menu-btn');
   const nav = document.getElementById('nav');
   if (btn && nav) {
+    const head = document.querySelector('.site-head');
     const set = (open) => {
+      if (open) nav.style.setProperty('--nav-top', Math.max(0, head.getBoundingClientRect().bottom) + 'px');
       btn.setAttribute('aria-expanded', String(open));
       nav.classList.toggle('open', open);
       document.body.classList.toggle('menu-open', open);
@@ -88,7 +90,7 @@
       io.disconnect();
       const css = document.createElement('link'); css.rel = 'stylesheet'; css.href = root + 'vendor/maplibre/maplibre-gl.css'; document.head.appendChild(css);
       (window.maplibregl ? Promise.resolve() : load(root + 'vendor/maplibre/maplibre-gl.js'))
-        .then(() => load(root + 'map.js?v=10'))
+        .then(() => load(root + 'map.js?v=11'))
         .then(() => window.lcMap(box))
         .catch(() => {});
     }, { rootMargin: '400px' });
