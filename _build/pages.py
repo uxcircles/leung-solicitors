@@ -9,7 +9,7 @@ import json, os
 
 BUILD = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(BUILD)
-V = "8"  # cache-bust: bump on every CSS/JS change
+V = "9"  # cache-bust: bump on every CSS/JS change
 
 FIRM = {
     "tel": "0333 577 7168", "tel_href": "+443335777168",
@@ -77,10 +77,11 @@ def head(slug, title, desc):
 </head>
 <body class="lang-{LANG} page-{slug}">
 <a class="skip" href="#main">{T('Skip to content', '跳到內容')}</a>
-<div class="concept">
-  <span class="concept-tag">Concept / 概念</span>
-  <span>{T('Redesign concept. Not the official', '重新設計概念，並非')} <a href="{FIRM['official']}">{T('Leung &amp; Co Law website', 'Leung &amp; Co Law 官方網站')}</a>{T('.', '。')}</span>
-  <a class="concept-by" href="https://ux-circles.com/professionals">{T('Designed by UX CIRCLES', 'UX CIRCLES 設計')} ↗</a>
+<div class="concept-bar" role="note">
+  <div class="wrap concept-inner">
+    <p><span class="concept-tag">{T('Concept', '概念')}</span><span class="concept-long">{T('Redesign concept. Not the', '重新設計概念，並非')} <a href="{FIRM['official']}" target="_blank" rel="noopener">{T('official Leung &amp; Co Law website', 'Leung &amp; Co Law 官方網站')}</a>{T('.', '。')}</span></p>
+    <a href="https://ux-circles.com/professionals" target="_blank" rel="noopener"><span class="concept-by">{T('Designed by ', '設計：')}</span><strong>UX CIRCLES</strong> <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+  </div>
 </div>
 """
 

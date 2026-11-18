@@ -51,11 +51,15 @@ p { margin: 0 0 1em; }
 .more { font-weight: 600; text-decoration: none; }
 .more:hover { text-decoration: underline; }
 
-/* concept bar */
-.concept { display: flex; flex-wrap: wrap; gap: 4px 14px; align-items: center; justify-content: center; padding: 8px 16px; background: var(--ink); color: #e9e1d6; font: 400 13px/1.4 var(--sans); text-align: center; }
-.concept a { color: #fff; }
-.concept-tag { border: 1px solid #8b7f75; border-radius: 3px; padding: 1px 6px; font-size: 11px; letter-spacing: .06em; text-transform: uppercase; }
-.concept-by { font-weight: 600; text-decoration: none; }
+/* concept bar (same structure as the other UX CIRCLES concepts) */
+.concept-bar { background: var(--ink); color: #e3d9cd; font-size: 13px; }
+.concept-inner { display: flex; align-items: center; justify-content: space-between; gap: 12px; min-height: 36px; }
+.concept-inner p { margin: 0; display: flex; align-items: center; gap: 10px; }
+.concept-inner a { color: #fff; display: inline-flex; align-items: center; gap: 4px; text-decoration: none; white-space: nowrap; }
+.concept-inner svg { width: 14px; height: 14px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+.concept-long a { text-decoration: underline; }
+.concept-tag { background: var(--seal); color: #fff; font-weight: 700; font-size: 11px; letter-spacing: .08em; text-transform: uppercase; padding: 2px 7px; border-radius: 2px; }
+@media (max-width: 640px) { .concept-long, .concept-by { display: none; } }
 
 /* header */
 .site-head { position: sticky; top: 0; z-index: 40; background: rgba(251, 248, 242, .96); backdrop-filter: blur(6px); border-bottom: 1px solid var(--line); }
