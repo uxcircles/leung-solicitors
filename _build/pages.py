@@ -9,7 +9,7 @@ import json, os
 
 BUILD = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(BUILD)
-V = "9"  # cache-bust: bump on every CSS/JS change
+V = "10"  # cache-bust: bump on every CSS/JS change
 
 FIRM = {
     "tel": "0333 577 7168", "tel_href": "+443335777168",
@@ -43,7 +43,7 @@ def seal(cls="seal", title=None):
 
 def bird(cls="bird"):
     """The phoenix oval only, cropped from the seal: used as bullets and dividers."""
-    return f'<svg class="{cls}" viewBox="20 27 86 120" aria-hidden="true"><use href="{P()}assets/img/seal.svg?v={V}#s"/></svg>'
+    return f'<svg class="{cls}" viewBox="0 0 80 106" aria-hidden="true"><use href="{P()}assets/img/seal.svg?v={V}#b"/></svg>'
 
 
 NAV = [
