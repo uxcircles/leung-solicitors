@@ -143,7 +143,7 @@ def footer():
     <p>{T(
         f'Leung &amp; Co Law is a trading name of Austen-Jones Solicitors Ltd, registered in England and Wales (company no. 07526477), authorised and regulated by the Solicitors Regulation Authority (<a href="{FIRM["sra"]}">SRA ID 557238</a>). Registered office: 145 Upland Road, London SE22 0DF. Notarial services are regulated by the Faculty Office of the Archbishop of Canterbury. We do not offer legal aid work.',
         f'Leung &amp; Co Law 為 Austen-Jones Solicitors Ltd 的營業名稱，於英格蘭及威爾斯註冊（公司編號 07526477），由律師規管局（Solicitors Regulation Authority）授權及規管（<a href="{FIRM["sra"]}">SRA 編號 557238</a>）。註冊地址：145 Upland Road, London SE22 0DF。公證服務由坎特伯雷大主教轄下的 Faculty Office 規管。本行不承辦法律援助個案。')}</p>
-    <p class="foot-concept">{T('Unofficial redesign concept by', '非官方重新設計概念，由')} <a href="https://ux-circles.com/professionals">UX CIRCLES</a>{T('', ' 製作')}</p>
+    <p class="foot-concept">{T('Unofficial redesign concept by ', '非官方概念設計：')}<a href="https://ux-circles.com/professionals" target="_blank" rel="noopener">UX CIRCLES</a></p>
   </div>
 </footer>
 <nav class="mbar" aria-label="{T('Quick actions', '快速聯絡')}">
